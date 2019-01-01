@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import './App.css';
+import Header from './Components/Header/Header.js'
+import Footer from './Components/Footer/Footer.js'
+import Home from './Components/Home/Home.js'
+import Resume from './Components/Resume/Resume.js'
+import Services from './Components/Services/Services.js'
+import Contact from './Components/Contact/Contact.js'
 
 class App extends Component {
+  constructor(props, context) {
+    super(props, context);
+}
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <BrowserRouter> 
+      <div>
+        <Header/>
+        <ReactCSSTransitionGroup
+                transitionName="transitionWrapper"
+                component="div"
+                className="transitionWrapper"
+                transitionEnterTimeout={300}
+                transitionLeaveTimeout={300}>
+        <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/services" component={Services} />
+              <Route path="/contact" component={Contact} />
+        </Switch>
+        </ReactCSSTransitionGroup>
+        <Footer/>
+        </div>
+        </BrowserRouter>
       </div>
     );
   }

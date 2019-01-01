@@ -1,0 +1,104 @@
+.bar {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+
+.title{
+    color: #49515d;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    line-height: 1;
+    margin: 38px 0 0;
+}
+
+.title span {
+    color: #2eca7f;
+}
+
+.left {
+    flex: 1 1 auto;
+}
+
+.right {
+    flex: 1 1 auto;   
+    padding-top: 18px;
+}
+
+li.item{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0 14px;
+    text-align: center;
+}
+
+.item a {
+    display: block;
+    position: relative;
+    padding: 8px 0;
+    margin: 0 20px;
+    text-align: center;
+    color: #49515d;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 600;
+    text-decoration: none;
+    outline: none;
+    opacity: 0.6;
+}
+
+.item a:visited {
+    color: #000;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.item a:hover {
+    color: #000;
+    font-weight: 800;
+    opacity: 1;
+    cursor:pointer;
+}
+
+.item a:visited::after {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 42px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #2eca7f;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.item a:hover::after {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 42px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #2eca7f;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
