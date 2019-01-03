@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
-
 import photo from '../../images/photo.png';
-import { Link } from "react-router-dom";
 
 const Home = () => (
   <div className={styles.home}>

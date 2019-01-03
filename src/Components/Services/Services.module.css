@@ -2,7 +2,7 @@
     position:relative;
     width: 100%;
     max-width: 1032px;
-    height: 714px;
+    /* height: 714px; */
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -10,9 +10,9 @@
     overflow: auto;
         /* Safari and Chrome */
         animation-name:mymove;
-        animation-duration:5s;
+        animation-duration:1s;
         -webkit-animation-name:mymove;
-        -webkit-animation-duration:5s;
+        -webkit-animation-duration:1s;
     }
     
     @keyframes mymove
@@ -24,10 +24,162 @@
 .inner{
     position:relative;
     width: 90%;
-    height: 700px;
+    /* height: 700px; */
     margin: 0 auto;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.1);
     overflow: auto;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    background-color: #2eca7f;
+    background-image: url(../../images/sp_main_bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.header h2{
+    font-weight: 600;
+    line-height: 1.5em;
+    color: #fff;
+    font-size: 44px;
+    margin: 0;
+}
+
+.title{
+    color: #424242;
+    font-size: 15px;
+    line-height: 1.6em;
+    position: absolute;
+    top: 14%;
+    left: 7%;
+}
+
+.title h3 {
+    font-size: 21px;
+    margin: 5px 0 25px;
+    font-weight: 600;
+}
+
+.title h3 span {
+    color: #2eca7f;
+}
+
+.service{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding-top: 20%;
+}
+
+.item{
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.development{
+    width: 120px;
+    height: 120px;
+    background-color: #fafafa;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.advetising{
+    width: 120px;
+    height: 120px;
+    background-color: #fafafa;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.management{
+    width: 120px;
+    height: 120px;
+    background-color: #fafafa;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.photography{
+    width: 120px;
+    height: 120px;
+    background-color: #fafafa;
+    border-radius: 100px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.service img{
+    max-width: 100px;
+    height: 64px;
+    margin: 28px 0;
+}
+
+.service p{
+    box-sizing: border-box;
+    padding: 0px 10%;
+    /* text-align: left; */
+    font-size: 15px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    color: #424242;
+    line-height: 1.6em;
+}
+
+.clients{
+    color: #424242;
+    font-size: 15px;
+    line-height: 1.6em;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.clients h3 {
+    font-size: 21px;
+    margin: 5px 0 25px;
+    font-weight: 600;
+    padding-top: 4%;
+    padding-left: 7%;
+}
+
+.clientsList{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.clientsList img{
+    max-width: 160px;
+    height: auto;
+    margin: 28px 0;
 }
