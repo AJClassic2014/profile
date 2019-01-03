@@ -2,53 +2,59 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.transitionWrapper-enter {
-  opacity: 0.01;
-  transition: opacity 30000ms ease-in;
-}
-
-.transitionWrapper-enter.transitionWrapper-enter-active {
+.preloader-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
   opacity: 1;
+  transition: opacity 0.3s;
+  transform: translate3d(-50%,-50%,0);
 }
 
-.transitionWrapper-leave {
-  opacity: 1;
-  transition: opacity 30000ms ease-in;
+#preloader_1{
+  position:relative;
 }
-
-.transitionWrapper-leave.transitionWrapper-leave-active {
-  opacity: 0;
+#preloader_1 span{
+  display:block;
+  bottom:0px;
+  width: 9px;
+  height: 5px;
+  background:#9b59b6;
+  position:absolute;
+  animation: preloader_1 1.5s  infinite ease-in-out;
+}  
+#preloader_1 span:nth-child(2){
+  left:11px;
+  animation-delay: .2s;  
 }
-
-.transitionWrapper {
-  position: relative;
+#preloader_1 span:nth-child(3){
+  left:22px;
+  animation-delay: .4s;
+}
+#preloader_1 span:nth-child(4){
+  left:33px;
+  animation-delay: .6s;
+}
+#preloader_1 span:nth-child(5){
+  left:44px;
+  animation-delay: .8s;
+}
+@keyframes preloader_1 {
+  0% {height:5px;transform:translateY(0px);background:#9b59b6;}
+  25% {height:30px;transform:translateY(15px);background:#3498db;}
+  50% {height:5px;transform:translateY(0px);background:#9b59b6;}
+  100% {height:5px;transform:translateY(0px);background:#9b59b6;}
 }

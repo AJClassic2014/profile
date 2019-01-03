@@ -8,6 +8,17 @@
     padding-bottom: 50px;
     background-color: transparent;
     overflow: auto;
+        /* Safari and Chrome */
+    animation-name:mymove;
+    animation-duration:5s;
+    -webkit-animation-name:mymove;
+    -webkit-animation-duration:5s;
+}
+
+@keyframes mymove
+{
+from {left:-1000px;}
+to {left:0px;}
 }
 
 .inner{

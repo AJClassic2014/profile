@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import './App.css';
 import Header from './Components/Header/Header.js'
 import Footer from './Components/Footer/Footer.js'
@@ -10,34 +9,46 @@ import Services from './Components/Services/Services.js'
 import Contact from './Components/Contact/Contact.js'
 
 class App extends Component {
-  constructor(props, context) {
-    super(props, context);
-}
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    };
+  }
+  componentDidMount() {
+    this.setState({
+      loading: false
+    });
+  }
   render() {
     return (
       <div className="App">
-      <BrowserRouter> 
-      <div>
-        <Header/>
-        <ReactCSSTransitionGroup
-                transitionName="transitionWrapper"
-                component="div"
-                className="transitionWrapper"
-                transitionEnterTimeout={300}
-                transitionLeaveTimeout={300}>
-        <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/resume" component={Resume} />
-              <Route path="/services" component={Services} />
-              <Route path="/contact" component={Contact} />
-        </Switch>
-        </ReactCSSTransitionGroup>
-        <Footer/>
-        </div>
-        </BrowserRouter>
+        {this.state.loading ?
+          <div className="loading">
+            <div class="preloader-animation">
+              <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div> :
+          <BrowserRouter>
+            <div>
+              <Header />
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/resume" component={Resume} />
+                <Route path="/services" component={Services} />
+                <Route path="/contact" component={Contact} />
+              </Switch>
+              <Footer />
+            </div>
+          </BrowserRouter>}
       </div>
     );
   }
 }
-
 export default App;

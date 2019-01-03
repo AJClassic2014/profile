@@ -8,7 +8,18 @@
     padding-bottom: 50px;
     background-color: transparent;
     overflow: auto;
-}
+        /* Safari and Chrome */
+        animation-name:mymove;
+        animation-duration:5s;
+        -webkit-animation-name:mymove;
+        -webkit-animation-duration:5s;
+    }
+    
+    @keyframes mymove
+    {
+    from {left:-1000px;}
+    to {left:0px;}
+    }
 
 .inner{
     position:relative;
@@ -19,9 +30,4 @@
     border-radius: 15px;
     box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.1);
     overflow: auto;
-    
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
 }
