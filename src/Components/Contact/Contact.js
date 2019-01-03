@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Contact.module.css";
+import ContactForm from "./ContactForm.js";
 
 const Contact = () => (
   <div className={styles.contact}>
@@ -21,7 +22,9 @@ const Contact = () => (
         </div>
         </div>
         <div className={styles.contactRight}>
-        <div className={styles.title}><h3>Contact <span>Form</span></h3></div>
+        <div className={styles.title}><h3>Contact <span>Form</span></h3>
+        <ContactForm />
+        </div>
         </div>
       </div>
     </div>
