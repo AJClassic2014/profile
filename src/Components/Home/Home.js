@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import photo from '../../images/photo.png';
 
 const Home = () => (

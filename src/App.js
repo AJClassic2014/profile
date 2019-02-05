@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import './App.css';
+import './App_compressed.css';
 import Header from './Components/Header/Header.js'
 import Footer from './Components/Footer/Footer.js'
 import Home from './Components/Home/Home.js'
@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
         {this.state.loading ?
           <div className="loading">
-            <div class="preloader-animation">
+            <div className="preloader-animation">
               <div id="preloader_1">
                 <span></span>
                 <span></span>

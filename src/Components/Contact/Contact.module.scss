@@ -1,0 +1,88 @@
+.contact {
+    position: relative;
+    width: 100%;
+    max-width: 1032px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: transparent;
+    overflow: auto;
+    animation-name: mymove;
+    animation-duration: 1s;
+    -webkit-animation-name: mymove;
+    -webkit-animation-duration: 1s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    padding-top: 10%;
+}
+@keyframes {
+    mymove {
+        from {left: -1000px;
+    }
+}
+to {
+    left: 0px;
+}
+} 
+
+.inner {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.1);
+        overflow: auto;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    background-color: #2eca7f;
+    background-image: url(../../images/sp_main_bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    h2 {
+        font-weight: 600;
+        line-height: 1.5em;
+        color: #fff;
+        font-size: 44px;
+        margin: 0;
+    }
+}
+.contactLeft {
+    flex: 1 1 auto;
+}
+.contactRight {
+    flex: 1 1 auto;
+}
+.title {
+    color: #424242;
+    font-size: 15px;
+    line-height: 1.6em;
+    h3 {
+        font-size: 21px;
+        margin: 5px 0 25px;
+        font-weight: 600;
+        span {
+            color: #2eca7f;
+        }
+    }
+}
+.details {
+    box-sizing: border-box;
+    padding: 14px 57px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 9fr;
+    grid-gap: 10px;
+    justify-items: start;
+}
+iframe {
+    width: 80%;
+    height: auto;
+}

@@ -1,0 +1,51 @@
+.resume {
+    position: relative;
+    width: 100%;
+    max-width: 1032px;
+    /* height: 714px; */
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: transparent;
+    overflow: auto;
+    /* Safari and Chrome */
+    animation-name: mymove;
+    animation-duration: 5s;
+    -webkit-animation-name: mymove;
+    -webkit-animation-duration: 5s;
+}
+ @keyframes mymove
+    {
+    from {left:-1000px;}
+    to {left:0px;}
+    }
+
+    .inner {
+        position: relative;
+        width: 90%;
+        /* height: 700px; */
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.1);
+        overflow: auto;
+    }
+
+.header {
+    position: absolute;
+    width: 100%;
+    background-color: #2eca7f;
+    background-image: url(../../images/sp_main_bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    h2 {
+        font-weight: 600;
+        line-height: 1.5em;
+        color: #fff;
+        font-size: 44px;
+        margin: 0;
+    }
+}

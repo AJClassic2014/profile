@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Services.module.css";
+import styles from "./Services.module.scss";
 import development from '../../images/web_design_icon.png';
 import photography from '../../images/photography_icon.png';
 import management from '../../images/creativity_icon.png';

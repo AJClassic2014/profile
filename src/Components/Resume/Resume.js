@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Resume.module.css";
+import styles from "./Resume.module.scss";
 import MyPdfViewer from "./MyPdfViewer.js";
 
 const Resume = () => (
